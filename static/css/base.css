@@ -1,0 +1,130 @@
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('../font/comfortaa/Comfortaa-VariableFont_wght.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: none;
+	font-family: "Comfortaa", sans-serif;
+	font-size: inherit;
+	color: black;
+	font-weight: 200;
+	z-index: 0;
+}
+
+ul { list-style: none; }
+*:active, *:after { color: black; }
+
+body {
+	background-color: #1A1A1A;
+	font-size: 20px;
+	width: 100vw;
+	min-width: 1440px;
+	margin-top: 60px;
+}
+
+
+#header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: gray;
+	width: 100%;
+	justify-content: center;
+	min-width: 1440px;
+	z-index: 5;
+	height: 60px;
+}
+
+
+.menu_list_header_closed > li:not(:first-child) { display: none; }
+#main_page_title { font-size: 1.8em; font-weight: 400; }
+
+#open_header_menu_btn {
+	height: 9px;
+	margin-left: 10px;
+}
+
+#change_lang_btn {
+	height: min-content;
+	width: min-content;
+	background-color: #92942E;
+	margin-left: 37px;
+	padding: 5px 6px;
+}
+
+
+section {
+	height: 100vh;
+	width: 100%;
+	min-height: 1020px;
+}
+
+.first_section {
+	height: calc(100vh - 60px);
+	min-height: 960px;
+}
+
+.section__title {
+	font-weight: 600;
+	font-size: 3em;
+	padding-top: 20px;
+	color: white;
+}
+
+.block_in_body_wrapper {
+	width: 1280px;
+	padding-left: 80px;
+	padding-right: 80px;
+	height: 100%;
+}
+
+
+.flex_wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex_wrapper_jcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.border-radius-style {
+	border-radius: 10px;
+}
+
+.container {
+	background-color: gray;
+	padding: 5px;
+}
+
+.small_info_block {
+	background-color: gray;
+	padding: 10px 27px;
+	max-width: 400px;
+	font-weight: inherit;
+	line-height: inherit;
+	transform: translateY(25px);
+}
+
+.small_info_block .small_info_block__title {
+	background-color: #404040;
+	padding: 5px 30px;
+	font-weight: 500;
+	transform: translateY(-30px);
+	max-width: 300px;
+	font-size: 1.5em;
+}
+
+
+.small_info_block .small_info_block__content {
+	font-weight: 300;
+	line-height: 1.5em;
+}
