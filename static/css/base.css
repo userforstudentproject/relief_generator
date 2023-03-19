@@ -89,22 +89,64 @@ section {
 	align-items: center;
 }
 
+.flex_wrapper_column {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+
 .flex_wrapper_jcenter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+.flex_wrapper_row_j-center_a-start {
+	justify-content: center;
+	align-items: flex-start;
+}
+.flex_wrapper_row_j-start_a-start {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.flex_wrapper_row_j-end_a-start {
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.flex_wrapper_row_j-center_a-end {
+	justify-content: center;
+	align-items: flex-end;
+}
+.flex_wrapper_row_j-start_a-end {
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+.flex_wrapper_row_j-end_a-end {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.flex_default_j {
+	justify-content: space-between !important;
+}
+
+.flex_stairs_of_align > *:nth-child(1) { align-self: flex-start; }
+.flex_stairs_of_align > *:nth-child(2) { align-self: center; }
+.flex_stairs_of_align > *:nth-child(3) { align-self: flex-end; }
+
 
 .border-radius-style {
 	border-radius: 10px;
 }
 
-.container {
-	background-color: gray;
-	padding: 5px;
-}
 
+
+
+
+
+/* ARTICLE styles */
 .small_info_block {
 	background-color: gray;
 	padding: 10px 27px;
@@ -123,8 +165,73 @@ section {
 	font-size: 1.5em;
 }
 
-
 .small_info_block .small_info_block__content {
 	font-weight: 300;
 	line-height: 1.5em;
+}
+
+/* TEXT styles */
+.simple_text {
+	font-size: 1.5em;
+	font-weight: 400;
+	display: block;
+	color: white;
+	width: max-content;
+	text-align: center;
+}
+
+.simple_text_big {
+	font-size: 3em;
+}
+
+.skewed_text_container {
+	display: block;
+	transform: skewX(15deg);
+}
+
+.skewed_text_container > span {
+	transform: skewX(-15deg);
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+/* some default sizes */
+.max-w_container { width: 100%; }
+.max-h_container { height: 100%; }
+.max_container { width: 100%; height: 100%; }
+.four_col_width { width: 400px; }
+.five_col_width { width: 510px; }
+
+.small_margin_left_container > * {
+	margin-left: 20px;
+}
+
+.small_margin_left_container > *:first-child {
+	margin-left: 0;
+}
+
+/* some containers */
+.container {
+	background-color: gray;
+	padding: 5px;
+	color: black;
+}
+
+.container * {
+	color: black;
+}
+
+.container_big {
+	padding: 40px 30px;
+}
+
+
+.container_black {
+	background-color: #252525;
+	color: white;
+}
+
+.container_black * {
+	color: white;
 }

@@ -39,6 +39,12 @@
 	padding-left: calc((100vw - 1280px) / 2);
 }
 
+.smart_line_vertical {
+	height: 100%;
+	width: 4px;
+	background-color: white;
+}
+
 .smart_logo_line_left {
 	transform: translateX(calc((100vw - 1280px) / (-2)));
 }
@@ -95,4 +101,25 @@
 
 #our_virtues_container *:nth-child(3) {
 	align-self: flex-start;
+}
+
+#possibilities_right_info_wrapper {
+	margin-top: 65px;
+	height: 100px;
+}
+
+#possibilities_left_info_wrapper {
+	height: 180px;
+}
+
+#possibilities_bottom_info_wrapper {
+	margin-top: 200px;
+}
+
+#possibilities_bottom_info_wrapper > div:last-child { width: 30%; }
+#possibilities_bottom_info_wrapper > div:last-child span { margin-top: 10px; }
+
+
+#possibilities_bottom_info_wrapper > div:first-child > span:last-child {
+	margin-left: 220px;
 }
