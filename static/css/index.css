@@ -95,14 +95,6 @@
 	margin-top: 60px;
 }
 
-#our_virtues_container *:nth-child(2) {
-	align-self: flex-end;
-}
-
-#our_virtues_container *:nth-child(3) {
-	align-self: flex-start;
-}
-
 #possibilities_right_info_wrapper {
 	margin-top: 65px;
 	height: 100px;
