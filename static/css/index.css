@@ -1,17 +1,18 @@
-.smart_logo_line {
-	height: 4px;
+.smart_line, .smart_line_vertical {
 	background-color: white;
+}
+
+.smart_line {
+	height: 4px;
 	width: 100%;
-	position: relative;
-	padding-left: calc((100vw - 1280px) / 2);
 }
 
 .smart_line_vertical {
 	height: 100%;
 	width: 4px;
-	background-color: white;
 }
 
+/*
 .smart_logo_line_left {
 	transform: translateX(calc((100vw - 1280px) / (-2)));
 }
@@ -24,4 +25,12 @@
 	.smart_logo_line {
 		padding-left: 80px;
 	}
+}*/
+
+
+
+
+
+#right_side_block_intro_section .from_side_block__side_right {
+	background-color: gray;
 }
