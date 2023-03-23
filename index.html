@@ -9,7 +9,7 @@
 	</head>
 	<body lang="uk">
 		<header class="header header--sticky">
-			<div class="wrapper">
+			<div class="wrapper max-h_container">
 				<div class="header__wrapper">
 					<div class="header__left_part">
 						<!-- some logo -->
@@ -17,7 +17,7 @@
 					</div>
           
 					<div class="header__right_part">
-						<nav class="drop-down_menu">
+						<nav class="header__menu drop-down_menu">
 							<ul class="drop-down_menu__content">
 								<li class="drop-down_menu__title">Link<span class="drop-down_menu__item_title_append"></span></li>
 								<li class="drop-down_menu__item">Link</li>
@@ -27,7 +27,7 @@
 							</ul>
 						</nav>
 						
-						<button id="change_lang_btn" class="border-radius-style simple_btn">uk</button>
+						<button id="change_lang_btn" class="header__lang_btn border-radius-style simple_btn">uk</button>
 					</div>
 				</div>
 			</div>
@@ -36,37 +36,35 @@
 		<section class="section">
 			<div class="section__wrapper">
 				<div class="section__content">
-					<div class="flex_wrapper_column flex_wrapper_j-space-around max_container">
-          
-						<div class="flex_wrapper max-w_container">
-							<div class="flex_wrapper_column medium-w_container">
-								<img src="static/img/mountain_big_logo_part.svg" class="flex_self_end" alt="logo">
-								<div class="smart_line flex_self_start"></div>
+					<div class="separated_block separated_block--align_reverse separated_block--reverse max-w_container small-h_container large-top_margin">
+						<div class="separated_block__first_item medium-w_container">
+							<div class="null_wrapper">
+								<div class="null_wrapper__content null_wrapper__content--right"><img src="static/img/mountain_big_logo_part.svg" alt="logo"></div>
 							</div>
-            
-							<div class="small-w_container flex_self_start">
+							<div class="smart_line"></div>
+						</div>
+						<div class="separated_block__second_item medium-w_container">
 								<img src="static/img/smart_big_logo_part.svg" alt="logo">
 								<div class="smart_line"></div>
-							</div>
 						</div>
+					</div>
 
-						<div id="right_side_block_intro_section" class="from_side_block">
-							<div class="from_side_block__side_left"></div>
-							<div class="from_side_block__content_wrapper">
-								<div class="from_side_block__content from_side_block__content--right">
-									<div class="action_article border-radius-style">
-										<span>Lorem ipsum dolor sit amet</span>
-										<span class="action_article__content_bottom">
-											<span>Lorem ipsum dolor</span>
-											<a id="intro_start_work_btn" href="#" class="simple_btn border-radius-style action_article__action">
-												Start<img class="simple_btn_append" src="static/img/mini_logo.svg" alt="icon">
-											</a>
-										</span>
-									</div>
+					<div id="right_side_block_intro_section" class="from_side_block very-small-top_margin">
+						<div class="from_side_block__side_left"></div>
+						<div class="from_side_block__content_wrapper">
+							<div class="from_side_block__content from_side_block__content--right">
+								<div class="action_article border-radius-style">
+									<span>Lorem ipsum dolor sit amet</span>
+									<span class="action_article__content_bottom">
+										<span>Lorem ipsum dolor</span>
+										<a id="intro_start_work_btn" href="#" class="simple_btn border-radius-style action_article__action">
+											Start<img class="simple_btn_append" src="static/img/mini_logo.svg" alt="icon">
+										</a>
+									</span>
 								</div>
 							</div>
-							<div class="from_side_block__side_right"></div>
 						</div>
+						<div class="from_side_block__side_right"></div>
 					</div>
 				</div>
 			</div>
@@ -86,7 +84,7 @@
 								<p class="small_info_block__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac scelerisque enim, in pulvinar velit. Nunc sit amet viverra sem, non tempor elit. Donec hendrerit eu ex ac egestas.</p>
 							</article>
             
-							<div class="container flex_self_end">GNU LOGO</div>
+							<div class="simple_text simple_text--theme_gray simple_text--container_large flex_self_end">GNU LOGO</div>
             
 							<article class="small_info_block flex_self_start">
 								<h4 class="small_info_block__title">
@@ -105,18 +103,18 @@
 				<div class="section__wrapper">
 					<h3 class="section__title">Lorem ipsum dolor</h3>
 					<div class="section__content">
-						<div class="null_wrapper">
+						<div class="null_wrapper very-small-top_margin">
 							<div class="null_wrapper__content null_wrapper__content--right">
-								<ul class="simple_list">
-									<li class="simple_list__item skewed_text container"><span class="skewed_text__content">lorem ipsum</span></li>
-									<li class="simple_list__item skewed_text container"><span class="skewed_text__content">lorem ipsum</span></li>
+								<ul class="simple_list simple_list--item_bg_gray">
+									<li class="simple_list__item skewed_wrapper"><span class="skewed_wrapper__content simple_text simple_text--block simple_text--default_theme">lorem ipsum</span></li>
+									<li class="simple_list__item skewed_wrapper"><span class="skewed_wrapper__content simple_text simple_text--block simple_text--default_theme">lorem ipsum</span></li>
 								</ul>
 							</div>
 						</div>
 
-						<div class="separated_block separated_block--vertical_seperator separated_block--align_reverse small-h_container">
+						<div class="separated_block separated_block--vertical_seperator separated_block--align_reverse very-small-h_container very-small-top_margin">
 							<div class="separated_block__first_item">
-								<span class="simple_text container">Lorem ipsum</span>
+								<span class="simple_text simple_text--theme_gray simple_text--container_small">Lorem ipsum</span>
 							</div>
 							<div class="separated_block__separator"><div class="smart_line_vertical"></div></div>
 							<div class="separated_block__second_item">
@@ -124,11 +122,15 @@
 							</div>
 						</div>
 
-						<div id="possibilties_block_bottom" class="space-between_wrapper">
+						<div class="space-between_wrapper medium-top_margin">
 							<div class="space-between_wrapper__content_left">
 								<div class="separated_block separated_block--align_reverse five_col_width">
-									<div class="separated_block__first_item"><span class="simple_text container_big container four_col_width">text block</span></div>
-									<div class="separated_block__second_item"><span class="simple_text container_big container_black four_col_width">text block</span></div>
+									<div class="separated_block__first_item">
+										<span class="simple_text simple_text--theme_gray simple_text--container_large simple_text--block four_col_width">text block</span>
+									</div>
+									<div class="separated_block__second_item">
+										<span class="simple_text simple_text--theme_black simple_text--container_large simple_text--block four_col_width">text block</span>
+									</div>
 								</div>
 							</div>
 							<div class="space-between_wrapper__content_right">
@@ -143,30 +145,76 @@
 			</div>
 		</section>
 
-		<section>
-			<h3 class="section__title max-w_container flex_wrapper flex_wrapper_row_j-end_a-start flex_default_a">Lorem ipsum dolor</h3>
-			
-			<div class="flex_wrapper_column flex_wrapper_j-space-around large-h_container max-w_container">
-				<div class="flex_wrapper_column seven_col_width small_margin_top_container flex_self_start">
-					<span class="simple_text flex_self_end">Lorem ipsum dolor</span>
-					<div class="smart_logo_line smart_logo_line_left flex_self_start"></div>
-					<div class="skewed_text_container flex_self_start container"><span>Lorem ipsum dolor</span></div>
-				</div>
-        
-				<div class="flex_wrapper max-w_container flex_wrapper_row_j-start_a-start flex_default_j">
-					<span class="simple_text container five_col_width small_font">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac scelerisque enim, in pulvinar velit.</p>
-					</span>
-					
-					<div class="flex_wrapper_column five_col_width small_margin_top_container">
-						<div class="skewed_text_container flex_self_end container"><span>Lorem ipsum dolor</span></div>
-						<div class="smart_logo_line flex_self_start"></div>
-						<span class="simple_text flex_self_start">Lorem ipsum dolor</span>
+		<section class="section">
+			<div class="wrapper max-h_container">
+				<div class="section__wrapper">
+					<h3 class="section__title section__title--right">Lorem ipsum</h3>
+					<div class="section__content">
+						<div class="separated_block separated_block--reverse separated_block--align_reverse small-top_margin five_col_width">
+							<div class="separated_block__first_item">
+								<div class="skewed_wrapper skewed_wrapper--bg_gray">
+									<div class="skewed_wrapper__content">
+										<span class="simple_text simple_text--default_theme">link</span>
+									</div>
+								</div>
+							</div>
+							<div class="separated_block__separator"><div class="smart_line"></div></div>
+							<div class="separated_block__second_item"><span class="simple_text simple_text--block">text</span></div>
+						</div>
+
+						<div class="space-between_wrapper max-w_container medium-top_margin">
+							<div class="space-between_wrapper__content_left">
+								<p class="simple_text simple_text--theme_gray simple_text--container_medium four_col_width">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+							</div>
+							<div class="space-between_wrapper__content_right">
+								<div class="separated_block five_col_width">
+									<div class="separated_block__first_item">
+										<div class="skewed_wrapper skewed_wrapper--bg_gray">
+											<div class="skewed_wrapper__content">
+												<span class="simple_text simple_text--default_theme">link</span>
+											</div>
+										</div>
+									</div>
+									<div class="separated_block__separator"><div class="smart_line"></div></div>
+									<div class="separated_block__second_item"><span class="simple_text simple_text--block">text</span></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		
-		<footer></footer>
+		<footer class="footer">
+			<div class="wrapper max-h_container">
+				<div class="footer__wrapper">
+					<div class="footer__content_left">
+						<img class="footer__logo_mountain" src="static/img/mini_logo.svg">
+						<span class="footer__logo_gnu simple_text simple_text--block simple_text--theme_black simple_text--container_large large-w_container">GNU logo</span>
+					</div>
+
+					<div class="footer__content_center">
+						<menu class="footer__menu">
+							<ul class="simple_list simple_list--medium_font">
+								<li class="simple_list__item">menu item</li>
+								<li class="simple_list__item">menu item</li>
+								<li class="simple_list__item">menu item</li>
+							</ul>
+						</menu>
+
+						<div class="footer__emails">
+							<span class="simple_text simple_text--default_theme simple_text--block">email</span>
+							<span class="simple_text simple_text--default_theme simple_text--block">email</span>
+						</div>
+					</div>
+					<div class="footer__content_right">
+						<ul class="footer__socials_list simple_list">
+							<li class="simple_list__item"><div class="simple_list__item_prepand simple_list__item_prepand--large social_logo"></div>social link</li>
+							<li class="simple_list__item"><div class="simple_list__item_prepand simple_list__item_prepand--large social_logo"></div>social link</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
