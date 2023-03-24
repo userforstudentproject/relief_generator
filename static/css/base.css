@@ -130,8 +130,8 @@ body {
 
 
 .simple_btn {
-	height: min-content;
-	width: min-content;
+	height: max-content;
+	width: max-content;
 	background-color: #92942E;
 	padding: 5px 6px;
 	display: flex;

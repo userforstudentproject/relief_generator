@@ -61,3 +61,31 @@ class PopupGroup {
 document.addEventListener('click', (e) => {
 	PopupGroup.closePopup(e)
 })
+
+
+class Lang {
+	static langs = new Map()
+
+	static createLang(langName, translationNameTranslateMap) {
+		this.langs.set(langName, new Map(translationNameTranslateMap))
+	}
+
+	static changeLang(langName) {
+		const translateMap = this.langs.get(langName)
+		translateMap.forEach((val, key) => {
+			const elementToTranslate = document.querySelector(`[translation-id="${key}"]`)
+			// elementsToTranslate.forEach((element) => {element.innerHtml = val})
+			if(elementToTranslate)
+				elementToTranslate.innerHTML = val;
+		})
+
+		this.nowLangName = langName
+		const langNames = Array(...this.langs.keys())
+		const nextLang = langNames[langNames.indexOf(this.nowLangName) + 1]
+		
+		if(!nextLang)
+			this.nextLangName = langNames[0];
+		else
+			this.nextLangName = nextLang;
+	}
+}
