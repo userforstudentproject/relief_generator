@@ -1,5 +1,5 @@
-new PopupGroup('drop-down_menu', 'drop-down_menu__trigger', 'drop-down_menu--opened')
-
+const popups = Popup.createPopups('drop-down_menu', 'drop-down_menu__trigger', ['drop-down_menu__trigger', 'drop-down_menu__item'], 'drop-down_menu--opened')
+Popup.createPullToClosePopups(popups, document)
 
 // lang
 Lang.createLang('en', [

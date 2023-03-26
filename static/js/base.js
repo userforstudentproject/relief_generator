@@ -1,12 +1,35 @@
 class Popup {
-	constructor(popup, trigger, modificator) {
+	constructor(popup, openTriggers, closeTriggers, openModificatorClassName) {
+		/**
+		* popup: HTMLElement
+		* openTriggers: Array(HTMLElement, ...)
+		* closeTriggers: Array(HTMLElement, ...)
+		* openModificatorClassName: String
+		*/
 		this.popup = popup
-		this.trigger = trigger
+		this.openTriggers = openTriggers
+		this.closeTriggers = closeTriggers
+		this.modificator = openModificatorClassName
 		this.opened = false
-		this.modificator = modificator
+
+		for(const openTrigger of this.openTriggers) {
+			openTrigger.addEventListener('click', (e) => {
+				this.open(e.timeStamp)
+			})
+		}
+		
+		for(const closeTrigger of this.closeTriggers) {
+			closeTrigger.addEventListener('click', (e) => {
+				this.close(e.timeStamp)
+			})
+		}
 	}
 
 	open(time) {
+		/**
+		* time: number
+		* time it is timeStamp of Event
+		*/
 		if(this.opened)
 			return;
 
@@ -16,61 +39,85 @@ class Popup {
 	}
 
 	close(time) {
+		/**
+		* time: number
+		* time it is timeStamp of Event
+		*/
 		if(!this.opened || time <= this.time)
 			return;
 
 		this.opened = false
 		this.popup.classList.remove(this.modificator)
 	}
-}
 
-class PopupGroup {
-	static popupGroups = Array()
-
-	constructor(popupClass, triggerClass, popupModificatorClass) {
-		this.popups = Array(...document.getElementsByClassName(popupClass)).map((popup) => {
-			return new Popup(popup, popup.getElementsByClassName(triggerClass)[0], popupModificatorClass)
-		})
-		
-		console.log(Array(...document.getElementsByClassName(popupClass)))
-		console.log(this.popups)
-
-		for(const popup of this.popups) {
-			popup.trigger.addEventListener('click', (e) => {
-				popup.open(e.timeStamp)
-			})
-		}
-
-		PopupGroup.popupGroups.push(this);
-	}
-
-	static closePopup(e) {
-		for(const popupG of this.popupGroups) {
-			for(const popup of popupG.popups) {
-				if(!popup.opened)
-					continue;
-
-				if(!popup.popup.contains(e.target) || e.target === popup.trigger)
-					popup.close(e.timeStamp);
+	static createPopups(popupClassName, openTriggerClassNames, closeTriggerClassNames, openModificatorClassName) {
+		/**
+		* createPopups static method which create Popup objects from class names of html elements
+		*
+		* popupClassName: String
+		* openTriggerClassNames: Array(String, ...) | String
+		* closeTriggerClassNames: Array(String, ...) | String
+		* openModificatorClassName: String
+		*/
+		const popupsHTML = document.getElementsByClassName(popupClassName)
+		const popups = Array()
+		const getByClassNames = (fromHTMLElement, classNames) => {
+			classNames = (classNames instanceof Array) ? classNames : [classNames]
+			let res = Array()
+			for(const className of classNames) {
+				const elementsOfClassName = fromHTMLElement.getElementsByClassName(className)
+				res = res.concat(Array.from(elementsOfClassName))
 			}
+			return res
 		}
+
+		for(const popupHTML of popupsHTML) {
+			const openTriggers = getByClassNames(popupHTML, openTriggerClassNames)
+			const closeTriggers = getByClassNames(popupHTML, closeTriggerClassNames)
+			const popup = new Popup(popupHTML, openTriggers, closeTriggers, openModificatorClassName)
+			popups.push(popup)
+		}
+
+		return popups
+	}
+
+	static createPullToClosePopups(popups, eventTargetHTML) {
+		/**
+		 * createPullToClosePopups it is static method which create global event(on eventTargetHTML) to close popups
+		 * when you click out of popup
+		 */
+
+		eventTargetHTML.addEventListener('click', (e) => {
+			const openedPopups = popups.filter((popup) => {
+				return popup.opened
+			})
+
+			for(const popup of openedPopups) {
+				if(!popup.popup.contains(e.target))
+					popup.close(e);
+			}
+		})
 	}
 }
-
-
-document.addEventListener('click', (e) => {
-	PopupGroup.closePopup(e)
-})
 
 
 class Lang {
 	static langs = new Map()
 
 	static createLang(langName, translationNameTranslateMap) {
+		/** createLang create Lang Map
+		 * <teg translation-id="some-id"></teg>
+		 * you need named your lang map: For exmaple "en"
+		 * translationNameTranslateMap: [['some-id', 'text of HTMLElement with attr translation-id'], ...]
+		 */
 		this.langs.set(langName, new Map(translationNameTranslateMap))
 	}
 
 	static changeLang(langName) {
+		/** this method change content of html elements with translation-id attr
+		 * for lang map that named langName
+		 * langName: String
+		 */
 		const translateMap = this.langs.get(langName)
 		translateMap.forEach((val, key) => {
 			const elementToTranslate = document.querySelector(`[translation-id="${key}"]`)
