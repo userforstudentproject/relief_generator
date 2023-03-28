@@ -10,6 +10,7 @@
 	border: none;
 	font-family: "Comfortaa", sans-serif;
 	font-size: inherit;
+	font-weight: inherit;
 	color: black;
 	font-weight: 200;
 	z-index: 0;
@@ -84,22 +85,37 @@ body {
 
 .drop-down_menu {
 	max-height: 1.3em;
+	min-width: 100px;
+	position: relative;
+}
+
+.drop-down_menu__title {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 4px;
+	padding-bottom: 0;
+}
+
+.drop-down_menu__content {
+	width: 100%;
+	height: max-content;
+	display: none;
+	padding: 4px;
+	padding-top: 0;
 }
 
 .drop-down_menu__item {
-	display: none;
 	line-height: 1.3em;
 }
 
-.drop-down_menu__item:hover {
-	border-bottom: solid 2px white;
-	line-height: 1.4em;
+.drop-down_menu--theme_black .drop-down_menu__content {
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.drop-down_menu__title_item {
-	color: white;
-	display: flex;
-	align-items: center;
+.drop-down_menu--theme_gray .drop-down_menu__content {
+	background-color: gray;
 }
 
 .drop-down_menu__trigger {
@@ -112,22 +128,32 @@ body {
 	background-position: center;
 }
 
-.drop-down_menu--opened .drop-down_menu__item { display: block; color: white; }
-.drop-down_menu--opened .drop-down_menu__title_item { color: black; }
 .drop-down_menu--opened .drop-down_menu__trigger {
 	transform: rotateZ(180deg);
 	height: 1em;
 	width: 1em;
 	background-color: white;
-	border-radius: 4px;
+	border-radius: 3px;
 	margin-left: 8px;
 }
 
 .drop-down_menu--opened .drop-down_menu__content {
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 0 5px 5px 5px;
+	display: block;
 }
 
+.drop-down_menu--side.drop-down_menu--opened .drop-down_menu__content {
+	margin-left: 101%;
+	position: absolute;
+	top: 0;
+}
+
+.drop-down_menu--opened.drop-down_menu--theme_gray .drop-down_menu__title {
+	background: gray;
+}
+
+.drop-down_menu--opened.drop-down_menu--theme_black .drop-down_menu__title {
+	background-color: rgba(0, 0, 0, 0.5);
+}
 
 .simple_btn {
 	height: max-content;
@@ -349,6 +375,23 @@ body {
 	color: black;
 	font-size: 1.2em;
 	font-weight: 300;
+}
+
+.simple_text--link {
+	font-size: 1em;
+}
+
+.simple_text--link:hover {
+	border-bottom: 2px solid white;
+}
+
+.simple_text--link--disabled {
+	color: black;
+}
+
+
+.simple_text--link--disabled:hover {
+	border: none;
 }
 
 .simple_text--container_small {

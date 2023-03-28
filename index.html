@@ -18,13 +18,19 @@
 					</div>
           
 					<div class="header__right_part">
-						<nav class="header__menu drop-down_menu">
-							<ul class="drop-down_menu__content">
-								<li class="drop-down_menu__title_item"><span translation-id="header-menu-title"></span><span class="drop-down_menu__trigger"></span></li>
-								<li class="drop-down_menu__item" translation-id="header-menu-item1">Link</li>
-								<li class="drop-down_menu__item" translation-id="header-menu-item2">Link</li>
-								<li class="drop-down_menu__item" translation-id="header-menu-item3">Link</li>
-							</ul>
+						<nav class="header__menu drop-down_menu drop-down_menu--theme_black">
+							<div class="drop-down_menu__title">
+								<a href="#" class="simple_text simple_text--link simple_text--link--disabled" translation-id="header-menu-title"></a>
+								<span class="drop-down_menu__trigger"></span>
+							</div>
+
+							<div class="drop-down_menu__content">
+								<ul class="drop-down_menu__list">
+									<li class="drop-down_menu__item"><a class="simple_text simple_text--link" translation-id="header-menu-item1"></a></li>
+									<li class="drop-down_menu__item"><a class="simple_text simple_text--link" translation-id="header-menu-item2"></a></li>
+									<li class="drop-down_menu__item"><a class="simple_text simple_text--link" translation-id="header-menu-item3"></a></li>
+								</ul>
+							</div>
 						</nav>
 						
 						<button id="change_lang_btn" class="header__lang_btn border-radius-style simple_btn">uk</button>
