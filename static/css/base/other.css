@@ -1,0 +1,25 @@
+
+.logo {
+	height: 40px;
+}
+
+.simple_btn {
+	height: max-content;
+	width: max-content;
+	background-color: #92942E;
+	padding: 5px 6px;
+	display: flex;
+	align-items: center;
+}
+
+.simple_btn_append {
+	margin-left: 5px;
+	height: 1em;
+	width: 1em;
+}
+
+.social_logo {
+	border-radius: 100%;
+	background-color: whitesmoke;
+	border: 2px solid black;
+}

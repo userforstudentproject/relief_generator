@@ -1,0 +1,15 @@
+.action_article {
+	padding: 10px;
+	background: gray;
+	min-width: 600px;
+	width: max-content;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.action_article__content_bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+

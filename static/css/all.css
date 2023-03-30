@@ -1,0 +1,18 @@
+@import 'base/null.css';
+@import 'base/wrappers.css';
+
+@import 'base/header.css';
+@import 'base/footer.css';
+
+@import 'base/action_article.css';
+@import 'base/drop-down_menu.css';
+@import 'base/from_side_block.css';
+@import 'base/info_block.css';
+@import 'base/list.css';
+@import 'base/section.css';
+@import 'base/separated_block.css';
+@import 'base/text.css';
+
+
+@import 'base/other.css';
+@import 'base/modificators.css';

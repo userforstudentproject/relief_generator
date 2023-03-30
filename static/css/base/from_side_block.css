@@ -1,0 +1,31 @@
+.from_side_block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.from_side_block__content_wrapper {
+	min-width: 1280px;
+}
+
+.from_side_block__content {
+	width: max-content;
+}
+
+.from_side_block__content--right {
+	margin-left: auto;
+}
+
+.from_side_block__side_left, .from_side_block__side_right {
+	width: 100%;
+	height: inherit;
+}
+
+.from_side_block--true_margin .from_side_block__side_left {
+	padding-right: 80px;
+}
+
+.from_side_block--true_margin .from_side_block__side_right {
+	padding-left: 80px;
+}
+

@@ -1,0 +1,42 @@
+.header {
+	background: gray;
+	height: 60px;
+	width: 100%;
+}
+
+
+.header--sticky {
+	position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 5;
+}
+
+.header__wrapper, .header__left_part, .header__right_part {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.header__left_part {
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.header__right_part {
+	font-size: 1em;
+	font-weight: 300;
+}
+
+.header__logo {
+	margin-right: 10px;
+}
+
+.header__title {
+	font-size: 1.5em;
+}
+
+.header__lang_btn {
+	margin-left: 37px;
+}

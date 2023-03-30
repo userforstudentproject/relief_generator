@@ -1,0 +1,44 @@
+.max-w_container { width: 100%; }
+.max-h_container { height: 100%; }
+.max_container { width: 100%; height: 100%; }
+.four_col_width { width: 400px; }
+.five_col_width { width: 510px; }
+.seven_col_width { width: 730px; }
+
+.large-w_container { width: 80%; }
+.medium-w_container { width: 50%; }
+.small-w_container { width: 30%; }
+.very-small-w_container { width: 15%; }
+
+.large-h_container { height: 80%; }
+.medium-h_container { height: 50%; }
+.small-h_container { height: 30%; }
+.very-small-h_container { height: 15%; }
+
+
+
+.very-small-top_margin { margin-top: 5%; }
+.small-top_margin { margin-top: 10%; }
+.medium-top_margin { margin-top: 15%; }
+.large-top_margin { margin-top: 20%; }
+
+.global--bg_gray {
+	background-color: gray;
+}
+
+.global--bg_black {
+	background-color: #252525;
+}
+
+.screen_container {
+	height: 100vh;
+	width: 100vw;
+}
+
+.border_bottom {
+	border-bottom: 2px solid white;
+}
+
+.border-radius-style {
+	border-radius: 10px;
+}

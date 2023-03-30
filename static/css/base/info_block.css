@@ -1,0 +1,23 @@
+.small_info_block {
+	background-color: gray;
+	padding: 10px 27px;
+	max-width: 400px;
+	font-weight: inherit;
+	line-height: inherit;
+	transform: translateY(25px);
+}
+
+.small_info_block__title {
+	background-color: #404040;
+	padding: 5px 30px;
+	font-weight: 500;
+	transform: translateY(-30px);
+	max-width: 300px;
+	font-size: 1.5em;
+}
+
+.small_info_block__content {
+	font-weight: 300;
+	line-height: 1.5em;
+}
+

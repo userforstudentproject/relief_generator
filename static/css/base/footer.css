@@ -1,0 +1,45 @@
+.footer {
+	height: 375px;
+	background-color: gray;
+}
+
+.footer__wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__content_left, .footer__content_center, .footer__content_right {
+	height: 100%;
+}
+
+.footer__content_left, .footer__content_right {
+	width: 300px;
+}
+
+.footer__content_center {
+	width: 355px;
+}
+
+.footer__logo_mountain {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.footer__logo_gnu {
+	margin-top: 40px;
+	width: 100%;
+}
+
+.footer__menu {
+	margin-top: 70px;
+}
+
+.footer__emails {
+	margin-top: 50px;
+}
+
+.footer__socials_list {
+	margin-top: 70px;
+}
