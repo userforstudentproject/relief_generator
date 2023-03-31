@@ -50,5 +50,9 @@
 }
 
 
-.space-between_wrapper__content_left {}
-.space-between_wrapper__content_right {}
+.space-between_wrapper__content_left {
+	z-index: 1;
+}
+
+.space-between_wrapper__content_right {
+}

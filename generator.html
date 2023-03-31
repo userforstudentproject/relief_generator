@@ -22,15 +22,15 @@
 							<div class="header__right_part">
 								<nav class="header__menu drop-down_menu drop-down_menu--theme_black">
 									<div class="drop-down_menu__title">
-										<a href="#" class="drop-down_menu__item_link drop-down_menu__item_link--disabled" translation-id="header-menu-title">menu title</a>
+										<a href="#" class="drop-down_menu__item__link drop-down_menu__item__link--disabled" translation-id="header-menu-title">menu title</a>
 										<span class="drop-down_menu__trigger"></span>
 									</div>
         
 									<div class="drop-down_menu__content">
 										<ul class="drop-down_menu__list">
-											<li class="drop-down_menu__item"><a class="drop-down_menu__item_link" translation-id="header-menu-item1">menu item</a></li>
-											<li class="drop-down_menu__item"><a class="drop-down_menu__item_link" translation-id="header-menu-item1">menu item</a></li>
-											<li class="drop-down_menu__item"><a class="drop-down_menu__item_link" translation-id="header-menu-item1">menu item</a></li>
+											<li class="drop-down_menu__item"><a class="drop-down_menu__item__link">menu item</a></li>
+											<li class="drop-down_menu__item"><a class="drop-down_menu__item__link">menu item</a></li>
+											<li class="drop-down_menu__item"><a class="drop-down_menu__item__link">menu item</a></li>
 										</ul>
 									</div>
 								</nav>
@@ -41,30 +41,54 @@
 					</div>
 				</header>
 
+				<div class="null_wrapper global--bg_black">
+					<div class="null_wrapper__content max-w_container">
+
+						<div class="wrapper">
+							<ul class="simple_list simple_list--inline simple_list--medium_container">
+            
+								<li class="simple_list__item">
+									<menu class=" drop-down_menu drop-down_menu--theme_black">
+										<div class="drop-down_menu__title">file<span class="drop-down_menu__trigger"></span></div>
+										<div class="drop-down_menu__content">
+											<ul class="drop-down_menu__list">
+												<li class="drop-down_menu__item">open</li>
+												<li class="drop-down_menu__item">new</li>
+												<li class="drop-down_menu__item">save as</li>
+												
+            
+												<menu class="drop-down_menu__item_sub_menu drop-down_menu drop-down_menu--side drop-down_menu--theme_black">
+													<div class="drop-down_menu__title">sub menu test<span class="drop-down_menu__trigger"></span></div>
+													<div class="drop-down_menu__content">
+														<ul class="drop-down_menu__list">
+															<li class="drop-down_menu__item">sub menu item</li>
+															<li class="drop-down_menu__item">sub menu item</li>
+															<li class="drop-down_menu__item">sub menu item</li>
+														</ul>
+													</div>
+												</menu>
+            
+											</ul>
+										</div>
+									</menu>
+								</li>
+            
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
 
 			</div>
+
 			<div class="space-between_wrapper__content_right max_container">
-			
-				<section class="section max_container">
-					<div class="section__wrapper">
-						<div class="section__content global--bg_black">
-							
-							<div class="wrapper">
-								<ul class="simple_list simple_list--inline simple_list--theme_black simple_list--medium_font simple_list--medium_container">
-									<li class="simple_list__item">file</li>
-									<li class="simple_list__item">file</li>
-									<li class="simple_list__item">file</li>
-								</ul>
-							</div>
 
-							<div class="space-between_wrapper max-h_container">
-								<div class="space-between_wrapper__content_left max-h_container large-w_container global--bg_gray"></div>
-								<div class="space-between_wrapper__content_right max-h_container small-w_container"></div>
-							</div>
 
-						</div>
-					</div>
-				</section>
+				<div class="space-between_wrapper max-h_container">
+					<div class="space-between_wrapper__content_left max-h_container large-w_container global--bg_gray"></div>
+					<div class="space-between_wrapper__content_right max-h_container small-w_container"></div>
+				</div>
 
 			</div>
 		</div>

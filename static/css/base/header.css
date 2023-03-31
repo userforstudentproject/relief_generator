@@ -1,15 +1,16 @@
 .header {
+	position: relative;
 	background: gray;
 	height: 60px;
 	width: 100%;
+	z-index: 10;
 }
-
 
 .header--sticky {
 	position: sticky;
 	left: 0;
 	top: 0;
-	z-index: 5;
+	z-index: 10;
 }
 
 .header__wrapper, .header__left_part, .header__right_part {
