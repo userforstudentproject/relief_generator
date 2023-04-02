@@ -8,7 +8,7 @@ class Test {
 		this.testItems.push(() => {
 			this.nowTest = testName
 			callbackfn()
-			console.log(`Test item [${this.nowTest}] passed`)
+			console.log(`    Test item [${this.nowTest}] passed`)
 		})
 	}
 
