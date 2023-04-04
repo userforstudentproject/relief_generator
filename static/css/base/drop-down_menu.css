@@ -1,0 +1,162 @@
+.drop-down_menu {
+	position: relative;
+	z-index: 100;
+}
+
+.drop-down_menu__title {
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+}
+
+.drop-down_menu__content {
+	display: block;
+	width: max-content;
+	height: max-content;
+	display: none;
+	position: absolute;
+	padding: 5px 10px;
+	border-top: 2px solid black;
+	transform: translateY(10px);
+	z-index: 150;
+}
+
+.drop-down_menu__list {
+	line-height: 1.3em;
+}
+
+.drop-down_menu--side > .drop-down_menu__content {
+	top: 5px;
+	margin-left: 105%;
+	transform: none;
+}
+
+.drop-down_menu--opened.drop-down_menu--side > .drop-down_menu__title {
+	border-right: 3px solid black;
+}
+
+.drop-down_menu__trigger {
+	margin-left: 5px;
+	height: 0;
+	width: 0;
+
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid black; /* color of trigger (close btn)*/
+	transition: linear 0.1s transform;
+}
+
+.drop-down_menu__trigger:hover {
+	transform: translateY(0.1em);
+}
+
+.drop-down_menu__item__link:hover {
+	border-bottom: 1px solid black;
+}
+
+
+.drop-down_menu--opened > .drop-down_menu__title > .drop-down_menu__trigger {
+	transform: rotateZ(180deg);
+}
+
+.drop-down_menu--opened > .drop-down_menu__content {
+	display: block;
+}
+
+.drop-down_menu__item { padding: 3px; }
+.drop-down_menu__item:hover { background-color: rgba(0, 0, 0, 0.3); }
+
+.drop-down_menu__item_sub_menu:hover { background-color: rgba(0, 0, 0, 0.3); }
+
+.drop-down_menu--theme_black .drop-down_menu__content {
+	background-color: #252525;
+	border-top-color: white;
+}
+
+
+.drop-down_menu--theme_black .drop-down_menu__title { color: white; }
+.drop-down_menu--theme_black .drop-down_menu__item { color: white; }
+.drop-down_menu--theme_black .drop-down_menu__item__link { color: white; }
+.drop-down_menu--theme_black .drop-down_menu__item__link:hover { border-bottom-color: white; }
+.drop-down_menu--side.drop-down_menu--theme_black > .drop-down_menu__title { border-right-color: white; }
+.drop-down_menu--theme_black .drop-down_menu__item:hover { background-color: rgba(255, 255, 255, 0.3); }
+.drop-down_menu--theme_black .drop-down_menu__item_sub_menu:hover { background-color: rgba(255, 255, 255, 0.3); }
+.drop-down_menu--theme_black .drop-down_menu__trigger { border-top-color: white; }
+
+
+.drop-down_menu--theme_gray .drop-down_menu__content {
+	background-color: #404040;
+}
+
+
+.drop-down_menu.drop-down_menu--side > .drop-down_menu__content {
+	border: none;
+}
+
+
+
+
+.drop-down_menu__item__link.drop-down_menu__item__link--disabled {
+	color: #303030;
+}
+
+.drop-down_menu__item__link.drop-down_menu__item__link--disabled:hover {
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.drop-down_menu--opened .drop-down_menu__title {
+	border-bottom: 2px solid black;
+	padding-bottom: 7px;
+	margin-bottom: 5px;
+}
+
+.drop-down_menu--side
+
+.drop-down_menu--opened.drop-down_menu--theme_black .drop-down_menu__wrapper { background-color: #151515; }
+.drop-down_menu--opened.drop-down_menu--theme_gray .drop-down_menu__wrapper { background-color: #404040; }
+.drop-down_menu--opened.drop-down_menu--side .drop-down_menu__wrapper { background-color: transparent; }
+
+.drop-down_menu--opened.drop-down_menu--theme_black .drop-down_menu__title { background-color: #151515; }
+.drop-down_menu--opened.drop-down_menu--theme_gray .drop-down_menu__title { background-color: #404040; }
+
+.drop-down_menu--opened.drop-down_menu--theme_black .drop-down_menu__content { background-color: #151515; }
+.drop-down_menu--opened.drop-down_menu--theme_gray .drop-down_menu__content { background-color: #404040; }
+
+
+
+.drop-down_menu--theme_black .drop-down_menu__item, .drop-down_menu--theme_black .drop-down_menu__item_link {
+	color: white;
+}
+
+.drop-down_menu--theme_black .drop-down_menu__item:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.drop-down_menu--theme_black .drop-down_menu__item_link:hover {
+	border-bottom-color: white;
+}
+
+.drop-down_menu--theme_black .drop-down_menu__trigger {
+	border-top-color: white;
+}
+
+.drop-down_menu--opened.drop-down_menu--theme_black .drop-down_menu__title {
+	border-bottom-color: white;
+	color: white;
+}
+
+*/

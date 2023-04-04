@@ -1,0 +1,54 @@
+.simple_text {
+	font-size: 1.5em;
+	font-weight: 400;
+	color: white;
+	width: max-content;
+	text-align: center;
+}
+
+.simple_text--theme_gray {
+	background-color: gray;
+	color: black;
+}
+
+.simple_text--theme_black {
+	background-color: #252525;
+}
+
+.simple_text--default_theme {
+	color: black;
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+.simple_text--link {
+	font-size: 1em;
+}
+
+.simple_text--link:hover {
+	border-bottom: 2px solid white;
+}
+
+.simple_text--link--disabled {
+	color: black;
+}
+
+
+.simple_text--link--disabled:hover {
+	border: none;
+}
+
+.simple_text--container_small {
+	padding: 5px;
+}
+
+.simple_text--container_medium {
+	padding: 10px;
+}
+
+.simple_text--container_large {
+	padding: 20px;
+	font-size: 1.6em;
+}
+
+.simple_text--block { display: block; }
