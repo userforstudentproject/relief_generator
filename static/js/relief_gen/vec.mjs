@@ -110,6 +110,12 @@ class Vec {
 		const newAngle = (nowAngle + angle) % (Math.PI * 2)
 		return this.withAngle(newAngle, axis, crossAxis, norm)
 	}
+
+	different(vec) {
+		const scalarMul = this.mul(vec)
+		const cos = scalarMul / (this.length * vec.length)
+		return Math.acos(cos)
+	}
 }
 
 
