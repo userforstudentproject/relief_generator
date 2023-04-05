@@ -4,6 +4,8 @@
 		<title>Relief Generator</title>
 		<link rel="icon" href="static/img/favicon.ico" type="image/vnd.microsoft.icon">
 		<link rel="stylesheet" href="static/css/all.css">
+		<script src="static/js/generator.js" type="module"></script>
+		
 		<script src="static/js/base.js"></script>
 		<meta charset="utf-8">
 	</head>
@@ -86,7 +88,9 @@
 
 
 				<div class="space-between_wrapper max-h_container">
-					<div class="space-between_wrapper__content_left max-h_container large-w_container global--bg_gray"></div>
+					<div class="space-between_wrapper__content_left max-h_container large-w_container global--bg_gray">
+						<canvas id="generator_viewbox" class="max_container"></canvas>
+					</div>
 					<div class="space-between_wrapper__content_right max-h_container small-w_container"></div>
 				</div>
 
